@@ -13,8 +13,8 @@ export function NavBox(props) {
                     <h1 className="text-base font-['Outfit'] flex flex-row items-center space-x-1 group-hover:text-indigo-800 transition-all ease-in-out duration-250">
                         <span>{item.title}</span>
                     </h1>
-                    <p className="text-xs text-black/80 md:truncate font-light font-['Plus_Jakarta_Sans'] transition-all ease-in-out duration-250">
-                        {item.description}
+                    <p className="text-xs text-black/80 md:truncate font-light font-['Plus_Jakarta_Sans']">
+                        <span>{item.description}</span>
                     </p>
                     <div className="flex flex-row items-center border-t mt-5 pt-1 pb-1">
                         <Tags size={16} strokeWidth={1} className="mr-1"/>
@@ -26,7 +26,7 @@ export function NavBox(props) {
     ))
 
     return (
-        <div className="my-1 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        <div className="my-1 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {stru}
         </div>
     )

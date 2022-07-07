@@ -18,25 +18,17 @@ export default function AppShellDemo() {
     const [opened, setOpened] = useState(false);
 
     const items = [[
-        { title: 'SM2 Keypairs', description: 'Public & Private keys of SM2 algorithm', href: '/init_sm2', tags: 'SM2, Server-Side' },
+        { title: 'SM2 Keypairs', description: 'Generate Public & Private keys of SM2 algorithm', href: '/init_sm2', tags: 'SM2, Server-Side' },
         { title: 'SM4 Hex Keys', description: 'Convert string to 128-bits hex keys of SM4', href: '/hexkey_sm4', tags: 'SM4, Client-Side' },
     ],[
         { title: 'SM2 Encrypt', description: 'File & Text Encrypt using SM2', href: '/encrypt_sm2', tags: 'SM2, Server-Side' },
-        { title: 'SM2 Decrypt', description: 'File & Text Decrypt using SM2', href: '/decrypt_sm2', tags: 'SM2, Client-Side' },
+        { title: 'SM2 Decrypt (Unavailable)', description: 'File & Text Decrypt using SM2', href: '/decrypt_sm2', tags: 'SM2, Client-Side' },
+        { title: 'SM4 Encrypt', description: 'File & Text Encrypt using SM4', href: '/encrypt_sm4', tags: 'SM4, Server-Side' },
+        { title: 'SM4 Decrypt (Unavailable)', description: 'File & Text Decrypt using SM4', href: '/decrypt_sm4', tags: 'SM4, Client-Side' },
     ],[
         { title: 'SM3 Signing', description: 'Sign File & Text using SM3', href: '/sign_sm3', tags: 'SM3, Server-Side' },
         { title: 'SM3 Sign-Verify', description: 'Verify SM3 Signature', href: '/verify_sm3', tags: 'SM3, Client-Side' },
     ]]
-
-    // const items = [
-    //     { title: 'Mantine', href: '#' },
-    //     { title: 'Mantine hooks', href: '#' },
-    //     { title: 'use-id', href: '#' },
-    // ].map((item, index) => (
-    //     <Anchor transform="uppercase" href={item.href} key={index}>
-    //         {item.title}
-    //     </Anchor>
-    // ));
 
     return (
         <div className="h-screen w-full h-full flex flex-col"
@@ -49,11 +41,7 @@ export default function AppShellDemo() {
                         <Logo />
                     </div>
                     <div className="flex w-full content-center justify-between md:w-1/2 md:justify-end">
-                        <Group className="list-reset flex justify-between flex-1 md:flex-none items-center">
-                            <Button variant="subtle">Enc</Button>
-                            <Button variant="subtle">Sign</Button>
-                            <Button variant="subtle">More</Button>
-                        </Group>
+                        {/*Sidebar*/}
                     </div>
                 </div>
             </nav>
