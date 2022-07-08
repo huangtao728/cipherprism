@@ -16,7 +16,6 @@ import { NavTitle } from '../components/NavTitle';
 import { NavBox } from '../components/NavBox';
 
 
-
 export default function AppShellDemo() {
     const theme = useMantineTheme();
     const [file, setFile] = useState(null);
@@ -26,15 +25,16 @@ export default function AppShellDemo() {
     const [hash, setHash] = useState('');
     const [signature, setSignature] = useState('');
     const [encrypted, setEncrypted] = useState('');
+    const [exported, setExported] = useState('');
 
     const doGenerate = () => {
         const sm2 = require('sm-crypto').sm2
-    
+
         let keypair = sm2.generateKeyPairHex()
-      
+
         let public_key = keypair.publicKey // 公钥
         let private_key = keypair.privateKey // 私钥
-    
+
         const data = {
             public_key: public_key,
             private_key: private_key
@@ -50,7 +50,7 @@ export default function AppShellDemo() {
 
             setFile(i);
             let reader = new FileReader();
-            reader.onload = function(){
+            reader.onload = function () {
                 let text = reader.result;
                 setFile(text);
             }
@@ -61,13 +61,14 @@ export default function AppShellDemo() {
     const uploadToServer = async (event) => {
         const response = await fetch("/api/all_in_sm2", {
             method: "POST",
-            body: JSON.stringify({file_content: file, public_key, private_key}),
+            body: JSON.stringify({ file_content: file, public_key, private_key }),
         });
-        
+
         const data = await response.json();
         setHash(data.hash);
         setSignature(data.signature);
         setEncrypted(data.encrypted);
+        setExported(JSON.stringify({ file, public_key, signature }));
     };
     return (
         <div className="h-screen w-full h-full flex flex-col"
@@ -90,7 +91,7 @@ export default function AppShellDemo() {
 
 
                 <div className="px-64 mt-0">
-                    <NavTitle title="SM2 Encrypt" description="File & Text Encrypt using SM2" icon={<Fence />} />
+                    <NavTitle title="Encrypt & Sign" description="Encrypt & Sign using SM2" icon={<Fence />} />
                     <Divider my="sm" className="mt-0" />
                     <Button onClick={doGenerate} color="gray" className="bg-black mb-3">
                         Get
@@ -120,7 +121,7 @@ export default function AppShellDemo() {
                         value={hash}
                         className="mb-2"
                     />
-                                        <TextInput
+                    <TextInput
                         label="Signature"
                         value={signature}
                         className="mb-2"
@@ -128,6 +129,11 @@ export default function AppShellDemo() {
                     <Textarea
                         label="Encrypted"
                         value={encrypted}
+                        className="mb-2"
+                    />
+                    <Textarea
+                        label="Exported"
+                        value={exported}
                     />
                 </div>
             </div>

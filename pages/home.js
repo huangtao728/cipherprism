@@ -28,6 +28,7 @@ export default function AppShellDemo() {
         { title: 'SM4 Encrypt', description: 'File & Text Encrypt using SM4', href: '/encrypt_sm4', tags: 'SM4, Server-Side' },
         { title: 'SM4 Decrypt (Unavailable)', description: 'File & Text Decrypt using SM4', href: '/decrypt_sm4', tags: 'SM4, Client-Side' },
     ],[
+        { title: 'Signature Verify', description: 'Verify the SM2 signature', href: '/all_verify_sm2', tags: 'All-in-one, SM2' },
         { title: 'SM2 Signing', description: 'Sign File & Text using SM2', href: '/sign_sm2', tags: 'SM2, Server-Side' },
         { title: 'SM2 Sign-Verify (Unavailable)', description: 'Verify SM2 Signature', href: '/verify_sm2', tags: 'SM2, Client-Side' },
     ]]
