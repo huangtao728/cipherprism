@@ -20,14 +20,16 @@ export default function AppShellDemo() {
     const items = [[
         { title: 'SM2 Keypairs', description: 'Generate Public & Private keys of SM2 algorithm', href: '/init_sm2', tags: 'SM2, Server-Side' },
         { title: 'SM4 Hex Keys', description: 'Convert string to 128-bits hex keys of SM4', href: '/hexkey_sm4', tags: 'SM4, Client-Side' },
+        { title: 'SM3 Hash', description: 'Calculate File & Text Hash using SM3', href: '/hash_sm3', tags: 'SM3, Client-Side' },
     ],[
+        { title: 'Encrypt & Sign', description: 'Encrypt & Sign using SM2', href: '/all_in_sm2', tags: 'All-in-one, SM2' },
         { title: 'SM2 Encrypt', description: 'File & Text Encrypt using SM2', href: '/encrypt_sm2', tags: 'SM2, Server-Side' },
         { title: 'SM2 Decrypt (Unavailable)', description: 'File & Text Decrypt using SM2', href: '/decrypt_sm2', tags: 'SM2, Client-Side' },
         { title: 'SM4 Encrypt', description: 'File & Text Encrypt using SM4', href: '/encrypt_sm4', tags: 'SM4, Server-Side' },
         { title: 'SM4 Decrypt (Unavailable)', description: 'File & Text Decrypt using SM4', href: '/decrypt_sm4', tags: 'SM4, Client-Side' },
     ],[
-        { title: 'SM3 Signing', description: 'Sign File & Text using SM3', href: '/sign_sm3', tags: 'SM3, Server-Side' },
-        { title: 'SM3 Sign-Verify', description: 'Verify SM3 Signature', href: '/verify_sm3', tags: 'SM3, Client-Side' },
+        { title: 'SM2 Signing', description: 'Sign File & Text using SM2', href: '/sign_sm2', tags: 'SM2, Server-Side' },
+        { title: 'SM2 Sign-Verify (Unavailable)', description: 'Verify SM2 Signature', href: '/verify_sm2', tags: 'SM2, Client-Side' },
     ]]
 
     return (
