@@ -9,10 +9,7 @@ import {
     useMantineTheme,
 } from '@mantine/core';
 import { Key, Cloud, Browser } from 'tabler-icons-react';
-import { Logo } from '../components/Logo';
-import { LinkHref } from '../components/LinkHref';
-import { NavTitle } from '../components/NavTitle';
-import { NavBox } from '../components/NavBox';
+import { PrismContainer, Logo, LinkHref, NavTitle, NavBox } from '../components';
 
 function string_to_hex(string) {
     var result = '';
@@ -32,8 +29,7 @@ export default function AppShellDemo() {
     }
 
     return (
-        <div className="h-screen w-full h-full flex flex-col"
-            style={{ backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] }}>
+        <PrismContainer>
 
             {/*Nav*/}
             <nav className="bg-white p-2 mt-0 fixed w-full z-10 top-0 border-b border-slate-900/10">
@@ -67,6 +63,6 @@ export default function AppShellDemo() {
             </div>
 
 
-        </div>
+        </PrismContainer>
     );
 }
