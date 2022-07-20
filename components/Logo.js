@@ -5,7 +5,7 @@ import Link from 'next/link';
 export function Logo() {
 
   return (
-    <Link href="/home">
+    <Link href="/">
       <div style={{display: 'inherit'}}>
         <Avatar color="cyan" radius="xl" className="align-middle mr-3">
           <Pyramid color='black' />

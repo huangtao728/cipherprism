@@ -2,6 +2,16 @@ import formidable from "formidable";
 import fs from "fs";
 const Redis = require("ioredis");
 
+/**
+ * @swagger
+ * /api/all_in_sm2:
+ *   get:
+ *     description: Get all data in SM2
+ *     responses:
+ *       200:
+ *         description: hello world
+ */
+
 function sm2_encrypt(string, public_key) {
     const cipherMode = 1 // 1 - C1C3C2，0 - C1C2C3
     const sm2 = require('sm-crypto').sm2
