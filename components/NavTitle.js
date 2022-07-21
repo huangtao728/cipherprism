@@ -1,6 +1,3 @@
-import { Avatar, Text } from '@mantine/core';
-import { ArrowRight } from 'tabler-icons-react';
-
 export function NavTitle(props) {
     const { title, description, icon } = props
     return (

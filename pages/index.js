@@ -36,7 +36,7 @@ export default function App() {
             {/*Nav*/}
             <PrismHeader />
             {/*Container*/}
-            <div className="container shadow-lg mx-auto bg-white mt-24 md:mt-16 h-full p-2 pb-12">
+            <div className="container shadow-lg mx-auto bg-white mt-24 md:mt-16 h-full p-2 pb-36">
 
                 <div className="max-w-md mx-auto bg-white overflow-hidden md:max-w-2xl min-w-full">
                     <div className="md:flex rounded-lg shadow appearance-none border m-2">

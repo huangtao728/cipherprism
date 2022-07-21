@@ -8,6 +8,7 @@ export function LinkHref(props) {
             <a
                 href={href}
                 target="_blank"
+                rel="noreferrer"
                 className={`${className} group text-blue-500 w-fit font-['Outfit'] font-light`}
             >
                 {title}

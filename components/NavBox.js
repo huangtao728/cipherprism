@@ -4,8 +4,9 @@ import Link from 'next/link';
 export function NavBox(props) {
     const { items } = props
 
-    const stru = items.map((item, index) => (
+    const stru = items.map((item) => (
         <Link
+            key={item.id}
             href={item.href}
             className="rounded-lg border h-border transition-all duration-500 p-4 cursor-pointer flex flex-col justify-between relative">
             <div>
