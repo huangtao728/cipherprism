@@ -16,7 +16,7 @@ import {
 import { Logo } from '../components/Logo';
 
 
-export default function AppShellDemo() {
+export default function App() {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
 
