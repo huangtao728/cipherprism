@@ -8,7 +8,7 @@ Just another toolkit that helps you encrypt and sign files or texts
 - SM2 Sign & Verify
 - SM3 Hash*
 - SM4 Encrypt & *Decrypt
-
+- Key Management
 
 > **Note**
 > `*` not yet realized
